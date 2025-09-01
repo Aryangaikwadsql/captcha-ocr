@@ -1,5 +1,9 @@
 # CAPTCHA OCR Cropper (VS Code Extension)
 
+![Logo](icon-128.png)
+
+[GitHub Repository](https://github.com/Aryangaikwadsql/captcha-ocr)
+
 A VS Code extension that opens a webview where you can load or paste an image, drag a crop rectangle, and run OCR on the cropped area using OCR.space.
 
 Features:
