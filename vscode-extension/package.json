@@ -8,6 +8,7 @@
     "theme": "dark"
   },
   "version": "0.1.1",
+  "repository": "https://github.com/Aryangaikwadsql/captcha-ocr",
   "publisher": "AryanGaikwad",
   "engines": {
     "vscode": "^1.85.0"
