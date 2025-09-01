@@ -1,0 +1,47 @@
+{
+  "name": "captcha-ocr-cropper",
+  "displayName": "CAPTCHA OCR Cropper",
+  "description": "Crop an image and extract text with OCR from a VS Code webview.",
+  "icon": "icon-128.png",
+  "galleryBanner": {
+    "color": "#007ACC",
+    "theme": "dark"
+  },
+  "version": "0.1.1",
+  "publisher": "AryanGaikwad",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": ["onCommand:captcha-ocr.open"],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "captcha-ocr.open",
+        "title": "CAPTCHA OCR: Open Cropper"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "CAPTCHA OCR Cropper",
+      "properties": {
+        "captchaOcr.ocrSpaceApiKey": {
+          "type": "string",
+          "default": "helloworld",
+          "markdownDescription": "OCR.space API key. Default is the public demo key 'helloworld'. For production, create your own key at https://ocr.space/ocrapi."
+        },
+        "captchaOcr.language": {
+          "type": "string",
+          "default": "eng",
+          "markdownDescription": "OCR language code, e.g., eng, deu, spa. See OCR.space docs for the list."
+        },
+        "captchaOcr.engine": {
+          "type": "number",
+          "default": 2,
+          "markdownDescription": "OCREngine parameter for OCR.space (1 or 2)."
+        }
+      }
+    }
+  }
+}

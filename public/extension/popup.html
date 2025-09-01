@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>CAPTCHA OCR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="popup.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main class="container" role="main" aria-labelledby="title">
+      <h1 id="title" class="title">CAPTCHA OCR</h1>
+
+      <div class="controls">
+        <button id="btn-start" class="btn primary" type="button" title="Start crop on the current tab">
+          Select area
+        </button>
+        <button id="btn-ocr" class="btn" type="button" title="Run OCR on the cropped image" disabled>
+          Run OCR
+        </button>
+      </div>
+
+      <div class="preview">
+        <canvas id="crop-canvas" width="0" height="0" aria-label="Cropped preview" role="img"></canvas>
+      </div>
+
+      <div class="result">
+        <label for="ocr-text" class="label">Detected text</label>
+        <textarea id="ocr-text" rows="4" class="textarea" placeholder="Text will appear here..." readonly></textarea>
+
+        <div class="meta">
+          <span id="confidence" class="meta-item">Confidence: —</span>
+          <span id="duration" class="meta-item">Time: —</span>
+        </div>
+
+        <div class="controls">
+          <button id="btn-copy" class="btn" type="button" title="Copy text" disabled>
+            Copy text
+          </button>
+          <button id="btn-clear" class="btn" type="button" title="Clear">Clear</button>
+        </div>
+      </div>
+
+      <p class="footnote">
+        Uses OCR.space demo key (limited). For production, add your own key.
+      </p>
+    </main>
+
+    <script src="popup.js" defer></script>
+  </body>
+</html>
