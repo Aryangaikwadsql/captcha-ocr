@@ -6,7 +6,7 @@
 
 A VS Code extension that opens a webview where you can load or paste an image, drag a crop rectangle, and run OCR on the cropped area using OCR.space.
 
-![Additional Screenshot](./screenshot.png)
+![Additional Screenshot](./vscode-extension/screenshot.png)
 
 Features:
 - Load image via file picker, drag-and-drop, or paste from clipboard
