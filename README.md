@@ -1,6 +1,6 @@
 # CAPTCHA OCR Cropper (VS Code Extension)
 
-![Screenshot](./Screenshot 2025-08-13 113838.png)
+![Screenshot](./Screenshot 2025-08-13 113249.png)
 
 [GitHub Repository](https://github.com/Aryangaikwadsql/captcha-ocr)
 
