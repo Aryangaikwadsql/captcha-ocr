@@ -6,7 +6,7 @@
 
 A VS Code extension that opens a webview where you can load or paste an image, drag a crop rectangle, and run OCR on the cropped area using OCR.space.
 
-![Additional Screenshot](./Screenshot 2025-09-02 113249.png)
+![Additional Screenshot](./screenshot.png)
 
 Features:
 - Load image via file picker, drag-and-drop, or paste from clipboard
@@ -30,4 +30,3 @@ Usage:
 Notes:
 - Replace the demo key with your own for production use.
 - If you need offline OCR, we can switch to a bundled Tesseract.js worker. If you meant a Visual Studio (Windows) VSIX instead of VS Code, tell me and I’ll generate that template.
-
