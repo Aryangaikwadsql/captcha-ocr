@@ -1,6 +1,28 @@
 const vscode = require("vscode")
 
+class CaptchaOcrProvider {
+  getTreeItem(element) {
+    return element
+  }
+
+  getChildren(element) {
+    if (!element) {
+      const item = new vscode.TreeItem("CAPTCHA OCR Cropper", vscode.TreeItemCollapsibleState.None)
+      item.command = {
+        command: "captcha-ocr.open",
+        title: "Open Cropper"
+      }
+      item.iconPath = new vscode.ThemeIcon("eye")
+      return [item]
+    }
+    return []
+  }
+}
+
 function activate(context) {
+  const provider = new CaptchaOcrProvider()
+  vscode.window.registerTreeDataProvider('captchaOcrView', provider)
+
   const disposable = vscode.commands.registerCommand("captcha-ocr.open", async () => {
     const panel = vscode.window.createWebviewPanel(
       "captchaOcrCropper",
