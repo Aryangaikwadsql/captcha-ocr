@@ -7,22 +7,42 @@
     "color": "#007ACC",
     "theme": "dark"
   },
-  "version": "0.1.1",
+  "version": "0.1.2",
   "repository": "https://github.com/Aryangaikwadsql/captcha-ocr",
   "publisher": "AryanGaikwad",
   "engines": {
     "vscode": "^1.85.0"
   },
   "categories": ["Other"],
-  "activationEvents": ["onCommand:captcha-ocr.open"],
+  "activationEvents": ["*"],
   "main": "./extension.js",
   "contributes": {
+    "views": {
+      "explorer": [
+        {
+          "id": "captchaOcrView",
+          "name": "CAPTCHA OCR",
+          "icon": "$(eye)",
+          "contextualTitle": "CAPTCHA OCR"
+        }
+      ]
+    },
     "commands": [
       {
         "command": "captcha-ocr.open",
-        "title": "CAPTCHA OCR: Open Cropper"
+        "title": "Open Cropper",
+        "icon": "$(add)"
       }
     ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "captcha-ocr.open",
+          "when": "view == captchaOcrView",
+          "group": "navigation"
+        }
+      ]
+    },
     "configuration": {
       "type": "object",
       "title": "CAPTCHA OCR Cropper",
