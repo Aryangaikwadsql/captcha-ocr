@@ -26,7 +26,3 @@ Usage:
 - Command Palette → “CAPTCHA OCR: Open Cropper”
 - Load/paste an image, draw a crop, click “Run OCR”
 - Adjust the threshold and scale sliders until the characters are cleanly black-and-white; the extension will re-run OCR instantly.
-
-Notes:
-- Replace the demo key with your own for production use.
-- If you need offline OCR, we can switch to a bundled Tesseract.js worker. If you meant a Visual Studio (Windows) VSIX instead of VS Code, tell me and I’ll generate that template.
